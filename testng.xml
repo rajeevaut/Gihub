@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RegTesting" parallel="tests" thread-count="6">
+
+	<!-- Add Listener java Class-->
+	
+	<listeners>
+		<listener class-name="TestPackage.Listeners"/>
+	</listeners>
+	
+	
+  <test name="Test">
+  	<parameter name="URL" value="http://citibank.co.in/"/> <!--will be accessible in entire xml>-->
+  	<parameter name="Username" value="1234565" />
+    <classes>
+      <class name="TestPackage.Basics"/>
+      <class name="TestPackage.Class2"/>
+    </classes>
+  </test>
+  
+  <test name="ExcludeTestfromClass">
+  	<classes>
+  		<class name ="TestPackage.Class2">
+  			<methods>
+  				<exclude name="Class2Test.*"/> <!-- Prefix.* -->
+  			</methods>
+  		</class>
+  	</classes>
+  </test>
+  
+</suite> <!-- Suite -->
