@@ -59,6 +59,7 @@ public class Basics {
 	@Test(dataProvider ="GetData")
 	public void LoginApp(String username, String pwd) {
 		System.out.println("Github addition");
+		System.out.println("Github addition2");
 		System.out.println(username +"--And--"+ pwd);
 	}
 	
