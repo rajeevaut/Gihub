@@ -64,6 +64,11 @@ public class Basics {
 		System.out.println(username +"--And--"+ pwd);
 	}
 	
+	@Test(dataProvider ="GetData")
+	public void LoginApp1(String username, String pwd) {
+		
+	}
+	
 	@DataProvider
 	public Object[][] GetData() {
 		

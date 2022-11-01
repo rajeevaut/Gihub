@@ -14,6 +14,11 @@ public class Class2 {
 		System.out.println("Second Class");
 	}
 	
+	@Test
+	public void Two() {
+		System.out.println("Second Class");
+	}
+	
 	@Test(groups= {"Smoke"})
 	public void Class2Testday3() {
 		System.out.println("day3");
